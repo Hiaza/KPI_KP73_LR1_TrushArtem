@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+    
+                                            <!-- usage of header -->
+
+    <header contextmenu="mymenu">
+            <h1>"Mango"</h1>
+    </header>
+    
+                                            <!-- usage of nav -->
+
+    <nav>
+            <a href="/home/">home</a> 
+            <a href="/news/">news</a> 
+            <a href="/photos/">photos</a> 
+            <a href="/contacts/">contacts</a>
+    </nav>
+
+                                            <!-- usage of main -->
+
+    <menu type="context" id="mymenu">
+            <menuitem label="Refresh" onclick="window.location.reload();" icon="index.png"></menuitem>
+            <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+    </menu>
+
+
+    <main>
+
+                                                    <!-- usage of section -->
+
+            <section>
+                    <h1>WWF</h1>
+                    <p>The World Wide Fund for Nature (WWF) is....</p>
+
+                    <picture>
+                            <source media="(min-width: 1100px)" srcset="Germany.jpg">
+                            <source media="(min-width: 600px)" srcset="pex.jpeg">
+                            <img src="foo.jpg" alt="peaceful pictures" style="width:auto;">
+                    </picture>
+                    <br/>
+
+                                                    <!-- usage of audio -->
+
+                    <audio controls>
+                            <source src="./Kaleida - Think.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                    </audio>
+                          
+                    <p><strong>Note:</strong> The audio tag is <mark>not supported</mark> in Internet Explorer 8 and earlier versions.</p>
+
+                                                    <!-- usage of bdi -->
+                    <header>
+                            <h1>Testing bdi</h1>
+                    </header>
+                    <p dir = "ltr"> <mark>hebrew word</mark> <bdi>נשיקה</bdi> is displayed right-to-left.</p>
+
+                    <video width="500" height="400" controls>
+                            <source src="cat.mp4" type='video/mp4'>
+                            <track kind="subtitles" src="FRIENDS S01EP01.srt" srclang="en" label="English">
+                            Тег video не поддерживается вашим браузером.
+                    </video>
+
+                    <>
+
+                    <header>
+                            <h1>Testing canvas</h1>
+                   </header>
+
+                   <canvas id='example'>Обновите браузер</canvas>
+
+                   <script>
+                        var example = document.getElementById("example"),
+                            ctx     = example.getContext('2d');
+                        example.height = 480;
+                        example.width  = 640;
+                        ctx.strokeStyle = '#B70A02'; // меняем цвет рамки
+                        ctx.strokeRect(15, 15, 266, 266);
+                        ctx.strokeRect(18, 18, 260, 260);
+                        ctx.fillStyle = '#AF5200'; // меняем цвет клеток
+                        ctx.fillRect(20, 20, 256, 256);
+                        for (i = 0; i < 8; i += 2)
+                            for (j = 0; j < 8; j += 2) {
+                                ctx.clearRect(20 + i * 32, 20 + j * 32, 32, 32);
+                                ctx.clearRect(20 + (i + 1) * 32, 20 + (j + 1) * 32, 32, 32);
+                            }
+                    </script>
+        
+            </section>
+
+                                                    <!-- usage of article -->
+            <article>
+                    
+                    <button id="openDialog">Открыть окно</button>
+
+                    <dialog>
+                            <header>
+                                    <h1>Web Technologies</h1>
+                            </header>
+                            
+                            <embed src="https://www.youtube.com/embed/SaA_cs4WZHM" width="400" height="300"/>  
+                    
+                            <p><button id="closeDialog">Закрыть окно</button></p>
+                    
+                    </dialog>
+                    
+                    <script>
+                        var dialog = document.querySelector('dialog');
+                        document.querySelector('#openDialog').onclick = function() {
+                        dialog.show(); // Показываем диалоговое окно
+                        }
+                        document.querySelector('#closeDialog').onclick = function() {
+                        dialog.close(); // Прячем диалоговое окно
+                        }
+                    </script>
+
+                    <p>Choose something:</p>
+                    <p><input list="fruits">
+                     <datalist id="fruits">
+                        <option value="apple"></option>
+                        <option value="babana"></option>
+                        <option value="orange"></option>
+                     </datalist>
+                    </p>
+
+                                                            <!-- usage of aside -->
+                    
+                    <aside>
+                        
+                        <dl>
+                            <dt>CSS</dt>
+                            <dd>A set of standards for styling documents presented on the 
+                            World Wide Web.</dd>
+                            <dt>PHP</dt>
+                            <dd>A server-side scripting language suited to dynamic HTML document 
+                            generation for the web.</dd>
+                            <dt>JavaScript</dt>
+                            <dd>A client-side scripting language used for manipulating HTML documents 
+                            within a browser.</dd>
+                        </dl>
+                    </aside>
+
+                                                            <!-- usage of figure -->
+
+                    
+                    <h3>Levels of pain:</h3>
+                    
+                    <p>painful
+                            <meter value="30" max="100" low="10" high="60"> </meter>
+                    </p>
+                    
+                    <p>very painful 
+                            <meter value="80" max="100" low="10" high="60"></meter>
+                    </p>
+                    
+                    <p>need to use all new html5 tags in one document
+                            <meter optimum="19" low="20" high="80" max="100" min="0" value="100"></meter>
+                    </p>
+                   </body>
+                    
+                   <h3>(white) - Tags left to finish task 1.</h3>
+                   <progress max="28" value="20">
+                     Загружено на <span id="value">25</span>%
+                   </progress>
+
+                  
+                   <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<wbr> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<wbr> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                   <h3>In general it takes<wbr>(code lines to gets there): <mark><output>160</output></mark></h3>
+
+                   <p>I did it <time datetime="2019-02-19 23:19">Simple day</time>.</p>
+
+
+
+                </article>
+
+
+    </main>
+
+                                            <!-- usage of footer -->
+
+    <footer>
+            <details>
+                    <summary>Copyright 2018-2019.</summary>
+                    <p> - by Artem Trush. All Rights Reserved.</p>
+            </details> 
+    </footer>
+
+    <br/>
+
+    <button onclick="showContent()">Show dragon</button>
+    
+    <template>
+            <figure>
+                    <img src="https://media.wired.com/photos/5ada3a2c1e66870735eada27/master/w_1509,c_limit/DragonPasswordFINAL.jpg" alt="Dragon" height="300px" width="300px" >        
+                                                    <!-- usage of figcaption -->
+                    <figcaption>This is Dragon</figcaption>
+            </figure>
+    </template>
+    
+    <script>
+        function showContent() {
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+    </script>
+
+</body>
+
+</html>
